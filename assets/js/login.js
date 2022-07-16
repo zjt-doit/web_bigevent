@@ -60,7 +60,9 @@ $(function () {
                     return layer.msg(res.message)
                 }
                 layer.msg('登录成功！')
-                localStorage.setItem('token',res.token)
+                console.log(res.token)
+                // 将token保存到localStorage本地存储中去
+                localStorage.setItem('token', res.token)
                 // 跳转到后台页面
                 location.href='./index.html'
                 
