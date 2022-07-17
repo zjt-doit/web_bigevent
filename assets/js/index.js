@@ -28,16 +28,16 @@ function getUserInfo() {
                 return layui.layer.msg('获取用户信息失败！')
             }
             // layui.layer.msg('获取用户信息成功！')
-            console.log(res)
+            // console.log(res)
 
             // 调用renderAvatar来渲染用户的头像
             renderAvatar(res.data)
         },
         complete: function(res){
-            console.log(res)
+            // console.log(res)
             if(res.responseJSON.status === 1 && res.responseJSON.message === '身份认证失败！'){
                 localStorage.removeItem('token')
-                location.href='./login.html'
+                location.href='/login.html'
             }
         }
     })
