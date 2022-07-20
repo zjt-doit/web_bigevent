@@ -17,7 +17,7 @@ $(function () {
 function getUserInfo() {
     $.ajax({
         method: 'get',
-        url: 'http://www.liulongbin.top:3007/my/userinfo',
+        url: '/my/userinfo',
         headers: {
             // 从本地存储localStorage中取值，是getItem
             Authorization: localStorage.getItem('token') || ''
