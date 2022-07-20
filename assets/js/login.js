@@ -34,7 +34,7 @@ $(function () {
         // 发起Ajax的post请求
         let username = $('.register [name=username]').val()
         let password = $('.register [name=password]').val()
-        $.post('http://www.liulongbin.top:3007/api/reguser', { username: username, password: password }, function (res) {
+        $.post('/api/reguser', { username: username, password: password }, function (res) {
             if (res.status !== 0) {
                 // return console.log(res.message)
                 return layer.msg(res.message)
@@ -52,7 +52,7 @@ $(function () {
         let username = $('.login [name=username]').val()
         let password = $('.login [name=password]').val()
         $.ajax({
-            url:'http://www.liulongbin.top:3007/api/login',
+            url:'/api/login',
             method:'post',
             data:{ username: username, password: password },
             success:function(res){

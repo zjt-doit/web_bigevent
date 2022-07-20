@@ -28,7 +28,15 @@ $(function(){
                 }
                 console.log(res)
 
+                
                 // 调用form.val()快速为表单赋值
+                /*
+                语法：form.val('filter', object);
+                用于给指定表单集合的元素赋值和取值。如果 object 参数存在，则为赋值；如果 object 参数不存在，则为取值。
+                作用：是为了提交按钮能够正常提交数据，在接口文档中的data有id，为了能够提交id，
+                又能不让id的input输入框在页面中显示，需要设置hidden隐藏属性
+                */ 
+                // 作用：可以将用户的信息快速填充到表格中去
                 form.val('userInfo',res.data)
             }
         })
